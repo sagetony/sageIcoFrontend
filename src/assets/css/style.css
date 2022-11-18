@@ -620,6 +620,23 @@ label {
 }
 
 /* 3. Mobile-menu */
+@media only screen and (min-width: 768px) {
+	.menu-area .mobile-nav-toggler { display: none;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.menu-area .mobile-nav-toggler { display: block;
+	}
+	.main-menu {
+		display: none;
+	}
+	.header-action{
+		display: none;
+	}
+
+}
 .nav-outer .mobile-nav-toggler {
 	position: relative;
 	float: right;
@@ -856,8 +873,10 @@ label {
     font-size: 30px;
     cursor: pointer;
     line-height: 1;
-    color: #000;
-    display: none;
+	color: white;
+
+    /* color: #000; */
+    /* display: block; */
     margin-top: 3px;
 }
 

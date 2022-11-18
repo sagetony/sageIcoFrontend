@@ -3,27 +3,40 @@
 // import Col from 'react-bootstrap/Col';
 
 // import Nav from 'react-bootstrap/Nav';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react';
+import { FaInstagram } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import {FaTimes} from 'react-icons/fa';
+import {FaBars} from 'react-icons/fa';
+
+
 
 function Header({logo}) {
+    const [isNone, setIsDisplay] = useState('')
+    const onclick = () => {
+        if
+        setIsDisplay('block')
+    }
   return (
     <div>
-        <header className="header">
+        <header id="header">
             <div className="header-fixed-height"></div>
             <div className="menu-area sticky-header">
             <div className="container custom-container">
                     <div className="row">
                         <div className="col-12">
-                            <div className="mobile-nav-toggler"><i className="fas fa-bars"></i></div>
+                            <div className="mobile-nav-toggler" onClick={onclick}><FaBars backgroundColor="red" /></div>
                             <div className="menu-wrap">
                                 <nav className="menu-nav">
                                     <div className="logo">
-                                        <a href="/"><img src={logo} alt="" /></a>
+                                        <a href="/"><img src={logo} alt="lOGO" /></a> 
                                     </div>
-                                    <div className="navbar-wrap main-menu d-none d-lg-flex">
+                                    <div className="navbar-wrap main-menu d-lg-flex">
                                         <ul className="navigation">
                                             <li className="active menu-item-has-children"><a href="#header" className="section-link">Home</a>
-                                               
                                             </li>
                                             <li><a href="#about" className="section-link">About us</a></li>
                                             <li><a href="#sales" className="section-link">Sales</a></li>
@@ -41,18 +54,18 @@ function Header({logo}) {
                             </div>
                             <div className="mobile-menu">
                                 <nav className="menu-box">
-                                    <div className="close-btn"><i className="fas fa-times"></i></div>
+                                    <div className="close-btn"><FaTimes /></div>
                                     <div className="nav-logo"><a href="/"><img src={logo} alt="Logo" title="" /></a>
                                     </div>
                                     <div className="menu-outer">
                                     </div>
                                     <div className="social-links">
                                         <ul className="clearfix">
-                                            <li><a href="#facebook"><i className="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#twitter"><i className="fab fa-twitter"></i></a></li>
-                                            <li><a href="#instagram"><i className="fab fa-instagram"></i></a></li>
-                                            <li><a href="#linkedin"><i className="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#youtube"><i className="fab fa-youtube"></i></a></li>
+                                            <li><a href="#facebook"><FaFacebook /></a></li>
+                                            <li><a href="#twitter"><FaTwitter /></a> </li>
+                                            <li><a href="#instagram"><FaInstagram /></a></li>
+                                            <li><a href="#linkedin"><FaLinkedinIn /></a></li>
+                                            <li><a href="#youtube"><FaYoutube /></a></li>
                                         </ul>
                                     </div>
                                 </nav>
